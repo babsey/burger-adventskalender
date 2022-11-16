@@ -208,7 +208,7 @@
       <v-card class="my-10 ma-auto" max-width="600" variant="text">
         <v-card-text style="line-height: 2rem; font-size: 1.5rem">
           Bitte haben Sie noch ein wenig Geduld. Der Kalender ist erst
-          {{ state.today.to(moment(state.year + "-12", "YYYY-MM")) }}
+          {{ state.today.to(firstDate()) }}
           verfügbar.
         </v-card-text>
       </v-card>
@@ -304,13 +304,12 @@ const updateConfig = () => {
 const resetState = () => {
   state.selectedDate = null;
   state.selectedEvent = null;
-  state.today = moment();
+  state.today = moment(moment().format("YYYY-MM-DD"));
 };
 
 const getQuery = () => {
   if (route.query.today) {
-    const date = state.year + "-12-" + route.query.today;
-    state.today = moment(date);
+    state.today = moment(state.year + "-12-" + route.query.today);
   }
 
   if (route.query.tag) {
