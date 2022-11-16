@@ -1,0 +1,81 @@
+{
+  "year": 2022,
+  "title": "Burger Adventskalender 2022",
+  "subtitle": "um 17.15 Uhr in Burg-Birkenhof",
+  "events": {
+    "1": { "location": "im Keltenring 216" },
+    "2": { "location": "im Burger Treff<br />(Haus Demant)" },
+    "3": {},
+    "4": {},
+    "5": {},
+    "6": { "location": "im Buchladen in der Rainhofscheune" },
+    "7": {},
+    "8": {},
+    "9": {},
+    "10": {},
+    "11": {},
+    "12": {},
+    "13": {
+      "location": "im Römerweg 7",
+      "img": {
+        "filename": "img/lucia-christmas_640.jpg",
+        "source": "https://pixabay.com/photos/lucia-christmas-1995125/"
+      }
+    },
+    "14": { "location": "in der Bubli<br />(Haus Demant)" },
+    "15": {},
+    "16": {},
+    "17": {},
+    "18": {},
+    "19": {},
+    "20": {},
+    "21": {},
+    "22": {}
+  },
+  "images": [
+    {
+      "filename": "img/advent-season-chocolate-pastries_640.jpg",
+      "source": "https://pixabay.com/photos/advent-season-chocolate-pastries-3010352/"
+    },
+    {
+      "filename": "img/advent-season-dürer-bread_640.jpg",
+      "source": "https://pixabay.com/photos/advent-season-dürer-bread-3010349/"
+    },
+    {
+      "filename": "img/christ-stollen-christmas-stollen_640.jpg",
+      "source": "https://pixabay.com/photos/christ-stollen-christmas-stollen-2903847/"
+    },
+    {
+      "filename": "img/christmas-lights-street-town_640.jpg",
+      "source": "https://pixabay.com/photos/christmas-lights-street-town-3834926/"
+    },
+    {
+      "filename": "img/christmas-motif-half-timbered-houses_640.jpg",
+      "source": "https://pixabay.com/photos/christmas-motif-half-timbered-houses-3834860/"
+    },
+    {
+      "filename": "img/cookies-walnuts-cinnamon-sticks_640.jpg",
+      "source": "https://pixabay.com/photos/cookies-walnuts-cinnamon-sticks-2991174/"
+    },
+    {
+      "filename": "img/forest-hills-snow-panorama-trees_640.jpg",
+      "source": "https://pixabay.com/photos/forest-hills-snow-panorama-trees-5903010/"
+    },
+    {
+      "filename": "img/snowman-snow-christmas-winter-cold_640.jpg",
+      "source": "https://pixabay.com/photos/snowman-snow-christmas-winter-cold-1882635/"
+    },
+    {
+      "filename": "img/stars-lanterns-lighting_640.jpg",
+      "source": "https://pixabay.com/photos/stars-lanterns-lighting-4664313/"
+    },
+    {
+      "filename": "img/winter-landscape-black-forest-tree_640.jpg",
+      "source": "https://pixabay.com/photos/winter-landscape-black-forest-tree-4548284/"
+    },
+    {
+      "filename": "img/winter-landscape-trees-frost-snow_640.jpg",
+      "source": "https://pixabay.com/photos/winter-landscape-trees-frost-snow-4532412/"
+    }
+  ]
+}
