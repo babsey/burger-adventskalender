@@ -9,12 +9,7 @@
           style="position: absolute; bottom: 0"
         >
           2022 -
-          <v-btn
-            size="x-small"
-            to="/impressum"
-            variant="text"
-            v-text="'Impressum'"
-          />
+          <v-btn size="x-small" to="/about" variant="text" v-text="'about'" />
         </v-footer>
       </v-main>
     </v-layout>

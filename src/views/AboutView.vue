@@ -1,10 +1,10 @@
 <template>
   <div class="about">
     <v-container class="text-justify">
-      <h2>Impressum</h2>
+      <h2>About</h2>
 
       <v-card variant="text" max-width="1000">
-        <v-card variant="text">
+        <v-card>
           <v-card-title v-text="'Wie funktioniert es?'" />
 
           <v-card-text>
@@ -35,7 +35,7 @@
           </v-card-text>
         </v-card>
 
-        <v-card variant="text">
+        <v-card>
           <v-card-title v-text="'Wer hat die Seite erstellt?'" />
 
           <v-card-text>
@@ -44,7 +44,7 @@
           </v-card-text>
         </v-card>
 
-        <v-card variant="text">
+        <v-card>
           <v-card-title v-text="'Mediennachweis'" />
 
           <v-card-text>
@@ -64,48 +64,26 @@
           </v-card-text>
         </v-card>
 
-        <v-card variant="text">
+        <v-card>
           <v-card-title v-text="'Datenschutzerklärung'" />
 
           <v-card-text>
-            <p class="my-2">
-              Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen
-              Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
-              vertraulich und entsprechend der gesetzlichen
-              Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-            </p>
-
-            <p class="my-2">
-              Die Nutzung unserer Webseite ist in der Regel ohne Angabe
-              personenbezogener Daten möglich. Soweit auf unseren Seiten
-              personenbezogene Daten (beispielsweise Name, Anschrift oder
-              E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich,
-              stets auf freiwilliger Basis. Diese Daten werden ohne Ihre
-              ausdrückliche Zustimmung nicht an Dritte weitergegeben.
-            </p>
-
-            <p class="my-2">
-              Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B.
-              bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen
-              kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch
-              Dritte ist nicht möglich. Die Hardware- und
-              Software-Infrastruktur, die wir verwenden, ist jedoch mit
-              branchenüblichen und regelmäßig aktualisierten
-              Sicherheitsmaßnahmen versehen.
-            </p>
+            Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Die
+            Nutzung unserer Webseite ist ohne Angabe personenbezogener Daten
+            möglich.
           </v-card-text>
         </v-card>
 
-        <v-card variant="text">
+        <v-card>
           <v-card-title v-text="'Wo finde ich die Lizenz der Seite?'" />
 
           <v-card-text>
-            Die Seite ist ein Open-Source-Software (OSS) und der MIT-Lizenz.
-            Mehr Information finden Sie unter
+            Die Seite ist ein Open-Source-Software (OSS) und unterliegt der MIT
+            Lizenz. Mehr Information finden Sie
             <a
               href="https://github.com/babsey/burger-adventskalender"
               target="_blank"
-              v-text="'https://github.com/babsey/burger-adventskalender'"
+              v-text="'hier'"
             />.
           </v-card-text>
         </v-card>
