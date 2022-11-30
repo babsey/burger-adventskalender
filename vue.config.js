@@ -15,8 +15,8 @@ module.exports = defineConfig({
     },
   },
   pwa: {
+    name: "Burger Adventskalender 2022",
     workboxOptions: {
-      exclude: ["index.html", "data.json"],
       skipWaiting: true,
     },
   },
