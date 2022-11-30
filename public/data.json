@@ -3,33 +3,33 @@
   "title": "Burger Adventskalender 2022",
   "subtitle": "um 17.15 Uhr in Burg-Birkenhof",
   "events": {
-    "1": { "location": "im Keltenring 216" },
+    "1": { "location": "im Keltenring 216<br />(Neuberth)" },
     "2": { "location": "im Burger Treff<br />(Haus Demant)" },
     "3": {},
-    "4": {},
+    "4": { "location": "in der Höllentalstr. 48<br />(Gasthaus Birke)" },
     "5": {},
     "6": { "location": "im Buchladen in der Rainhof Scheune" },
     "7": {},
     "8": {},
-    "9": {},
+    "9": { "location": "im Keltenring 51<br />(Garten, Wegweiser folgen)" },
     "10": {},
-    "11": {},
-    "12": {},
-    "13": {
+    "11": { "location": "im Keltenring 222<br />(Langenbacher)" },
+    "12": {
       "location": "im Römerweg 7",
       "img": {
         "filename": "img/lucia-christmas_640.jpg",
         "source": "https://pixabay.com/photos/lucia-christmas-1995125/"
       }
     },
+    "13": {},
     "14": { "location": "in der Bubli<br />(Haus Demant)" },
-    "15": {},
+    "15": { "location": "im Keltenring 19<br />(Bladt)" },
     "16": {},
     "17": {},
     "18": {},
-    "19": {},
-    "20": {},
-    "21": {},
+    "19": { "location": "im Keltenring 87<br />(Familie Wolfgang)" },
+    "20": { "location": "am Rainhof 3<br />(Pabst)" },
+    "21": { "location": "am Rainhof 21<br />(Laule/Hacker)" },
     "22": {}
   },
   "images": [
