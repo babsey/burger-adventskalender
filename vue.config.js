@@ -1,6 +1,7 @@
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   publicPath: "/burger-adventskalender", // process.env.BASE_URL,
+  productionSourceMap: false,
   transpileDependencies: true,
   pluginOptions: {
     vuetify: {
@@ -11,6 +12,12 @@ module.exports = defineConfig({
     index: {
       entry: "src/main.ts", // entry for the page
       title: "Burger Adventskalender 2022",
+    },
+  },
+  pwa: {
+    workboxOptions: {
+      exclude: ["index.html", "data.json"],
+      skipWaiting: true,
     },
   },
 });
