@@ -1,28 +1,27 @@
 <template>
   <div class="calendarView">
-    <div
-      class="text-bg-black text-white"
-      v-if="state.ready && state.isDecember"
-    >
+    <div class="text-bg-black text-white" v-if="state.ready">
       <div class="no-print background">
-        <video
-          class="video-background"
-          autoplay
-          loop
-          muted
-          plays-inline
-          v-if="state.config.videoAutoplay"
-        >
-          <source
-            :src="require('@/assets/media/octagon.mp4')"
-            type="video/mp4"
+        <span :style="{ opacity: state.background }">
+          <video
+            class="video-background"
+            autoplay
+            loop
+            muted
+            v-if="state.config.videoAutoplay"
+          >
+            <source
+              :src="require('@/assets/media/octagon.mp4')"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <img
+            v-else
+            class="img-background"
+            :src="require('@/assets/img/octagon.png')"
           />
-        </video>
-        <video
-          v-else
-          class="video-background"
-          :poster="require('@/assets/img/octagon.png')"
-        />
+        </span>
       </div>
 
       <v-app-bar class="no-print" color="transparent" flat>
@@ -38,18 +37,19 @@
                   density="compact"
                   class="mx-3 no-print"
                   hide-details
-                  label="Hintergrundvideo abspielen"
+                  label="Video abspielen"
                   v-model="state.config.videoAutoplay"
                 />
               </v-list-item>
               <v-list-item density="compact">
-                <v-switch
-                  @change="updateConfig"
+                <v-slider
                   density="compact"
                   class="mx-3 no-print"
                   hide-details
-                  label="Zeige Orte im Kalender an"
-                  v-model="state.config.showLocationInCalender"
+                  v-model="state.background"
+                  min="0"
+                  max="1"
+                  step="0.1"
                 />
               </v-list-item>
             </v-list>
@@ -174,14 +174,7 @@
                 >
                   <div v-text="date.format('dd')" />
                   <div class="text-h3 handlee" v-text="date.format('D')" />
-                  <div
-                    :class="
-                      state.config.showLocationInCalender || isToday(date)
-                        ? ''
-                        : 'print'
-                    "
-                    v-html="getLocation(date)"
-                  />
+                  <div v-html="getLocation(date)" />
                 </v-card>
               </v-col>
 
@@ -207,9 +200,7 @@
     <div v-else>
       <v-card class="my-10 ma-auto" max-width="600" variant="text">
         <v-card-text style="line-height: 2rem; font-size: 1.5rem">
-          Bitte haben Sie noch ein wenig Geduld. Der Kalender ist erst
-          {{ state.today.to(firstDate()) }}
-          verfügbar.
+          Bitte haben Sie noch ein wenig Geduld. Die Seite wird geladen.
         </v-card-text>
       </v-card>
     </div>
@@ -230,15 +221,14 @@ const display = useDisplay();
 const route = useRoute();
 
 const state = reactive({
+  background: 0.5,
   config: {
     videoAutoplay: !display.mobile.value,
-    showLocationInCalender: false,
   },
   dates: [],
   events: {},
   image: {},
   images: [],
-  isDecember: false,
   menu: false,
   ready: false,
   selectedDate: null,
@@ -270,10 +260,6 @@ const lastDate = () => state.dates[state.dates.length - 1];
 const isDateValid = (date: number) =>
   firstDate().date() <= date && date <= lastDate().date();
 
-const isDecember = (date: moment.Moment) =>
-  date.isSameOrAfter(firstDate(), "day");
-const isToday = (date: moment.Moment) => date.isSame(state.today, "day");
-
 const getEvent = (date: moment.Moment | undefined) =>
   date && date.date() in state.events ? state.events[date.date()] : null;
 const getLocation = (date: moment.Moment) =>
@@ -304,12 +290,12 @@ const updateConfig = () => {
 const resetState = () => {
   state.selectedDate = null;
   state.selectedEvent = null;
-  state.today = moment(moment().format("YYYY-MM-DD"));
+  state.today = moment(moment().format("YYYY-MM-DD"), "YYYY-MM-DD");
 };
 
 const getQuery = () => {
   if (route.query.today) {
-    state.today = moment(state.year + "-12-" + route.query.today);
+    state.today = moment(state.year + "-12-" + route.query.today, "YYYY-MM-DD");
   }
 
   if (route.query.tag) {
@@ -332,7 +318,7 @@ const init = () => {
     state.title = data.title;
     state.subtitle = data.subtitle;
     state.dates = Object.keys(state.events).map((d) =>
-      moment(state.year + "-12-" + d)
+      moment(state.year + "-12-" + d, "YYYY-MM-DD")
     );
     update();
     state.ready = true;
@@ -343,7 +329,6 @@ const update = () => {
   resetState();
   updateConfig();
   getQuery();
-  state.isDecember = isDecember(state.today);
   state.selectedEvent = getEvent(state.selectedDate);
   selectImage();
 };
@@ -405,9 +390,15 @@ watch(() => route.query, update);
   }
 
   .background {
+    background-color: black;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
     position: fixed;
+    right: 0;
 
-    .video-background {
+    .video-background,
+    .img-background {
       /*  making the video fullscreen  */
       bottom: 0;
       min-height: 100%;

@@ -78,7 +78,7 @@
           <v-card-title v-text="'Wo finde ich die Lizenz der Seite?'" />
 
           <v-card-text>
-            Die Seite ist ein Open-Source-Software (OSS) und unterliegt der MIT
+            Die Seite ist eine Open-Source-Software (OSS) und unterliegt der MIT
             Lizenz. Mehr Information finden Sie
             <a
               href="https://github.com/babsey/burger-adventskalender"

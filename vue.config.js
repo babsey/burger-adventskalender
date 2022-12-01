@@ -16,6 +16,7 @@ module.exports = defineConfig({
   },
   pwa: {
     name: "Burger Adventskalender 2022",
+    themeColor: "#000000",
     workboxOptions: {
       skipWaiting: true,
     },
