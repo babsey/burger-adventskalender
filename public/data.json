@@ -5,11 +5,11 @@
   "events": {
     "1": { "location": "im Keltenring 216<br />(Neuberth)" },
     "2": { "location": "im Burger Treff<br />(Haus Demant)" },
-    "3": {},
+    "3": { "location": "am Rainhof 27<br />(Kasemir)"},
     "4": { "location": "in der Höllentalstr. 48 (Gasthaus Birke)" },
     "5": {},
     "6": { "location": "im Buchladen in der Rainhof Scheune" },
-    "7": {},
+    "7": { "location": "im Keltenrin 77<br />(Familie Esser)" },
     "8": { "location": "im Keltenring 18<br />(Familie Demerath)" },
     "9": { "location": "im Keltenring 51<br />(Garten, Wegweiser folgen)" },
     "10": {},
