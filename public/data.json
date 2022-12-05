@@ -6,12 +6,12 @@
     "1": { "location": "im Keltenring 216<br />(Neuberth)" },
     "2": { "location": "im Burger Treff<br />(Haus Demant)" },
     "3": { "location": "am Rainhof 27<br />(Kasemir)" },
-    "4": { "location": "in der Höllentalstr. 48 (Gasthaus Birke)" },
+    "4": { "location": "in der Höllentalstr. 48<br />(Gasthaus Birke)" },
     "5": {},
     "6": { "location": "im Buchladen in der Rainhof Scheune" },
     "7": { "location": "im Keltenring 52<br />(Familie Esser)" },
     "8": { "location": "im Keltenring 18<br />(Familie Demerath)" },
-    "9": { "location": "im Keltenring 51<br />(Garten, Wegweiser folgen)" },
+    "9": { "location": "im Keltenring 51<br />(Wegweiser folgen)" },
     "10": {},
     "11": { "location": "im Keltenring 222<br />(Langenbacher)" },
     "12": {
@@ -21,13 +21,15 @@
         "source": "https://pixabay.com/photos/lucia-christmas-1995125/"
       }
     },
-    "13": {},
+    "13": { "location": "im Tarodunumweg 83<br />(Janßen)" },
     "14": { "location": "in der Bubli<br />(Haus Demant)" },
     "15": { "location": "im Keltenring 19<br />(Bladt)" },
     "16": {},
     "17": { "location": "im Römerweg 5<br />(Lechner)" },
     "18": { "location": "im Keltenring 87<br />(Familie Wolfgang)" },
-    "19": {},
+    "19": {
+      "location": "am unteren Rainhof 2 (Weller)"
+    },
     "20": { "location": "am Rainhof 3<br />(Pabst)" },
     "21": { "location": "am Rainhof 21<br />(Laule/Hacker)" },
     "22": { "location": "im Keltenring 72<br />(Familie Gallus)" }

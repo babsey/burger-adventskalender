@@ -24,7 +24,7 @@
         </span>
       </div>
 
-      <v-app-bar class="no-print" color="transparent" flat>
+      <v-app-bar density="compact" class="no-print" color="transparent" flat>
         <v-menu v-model="state.menu" :close-on-content-click="false">
           <template v-slot:activator="{ props }">
             <v-btn icon="mdi-menu" v-bind="props" variant="text" />
@@ -68,13 +68,24 @@
         </div>
 
         <div
-          style="margin-left: -12px"
           v-if="state.dates.length > 0"
           v-touch="{
             left: toNextDate,
             right: toPreviousDate,
           }"
         >
+          <card class="mx-10 no-print">
+            <v-alert
+              closable
+              density="compact"
+              icon="mdi-coffee-to-go"
+              type="warning"
+              variant="tonal"
+            >
+              Bitte bringt Becher mit! Es gibt eventl. Kinderpunch und Glühwein.
+            </v-alert>
+          </card>
+
           <v-card
             border="0"
             class="ma-auto location"
@@ -168,7 +179,7 @@
                   :color="color(date.weekday())"
                   :variant="date.isBefore(state.today) ? 'text' : 'outlined'"
                   @click="toDate(date.date())"
-                  class="d-flex flex-column justify-center align-center rounded-xl card handlee"
+                  class="d-flex flex-column justify-center align-center rounded-xl card handlee pa-1"
                   height="150"
                   width="150"
                 >
@@ -410,6 +421,7 @@ watch(() => route.query, update);
   }
 
   .wrapper {
+    max-width: 1200px;
     position: relative;
 
     .handlee {

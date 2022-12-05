@@ -1,4 +1,6 @@
 const { defineConfig } = require("@vue/cli-service");
+const title = require("./public/data.json").title;
+
 module.exports = defineConfig({
   publicPath: "/burger-adventskalender", // process.env.BASE_URL,
   productionSourceMap: false,
@@ -11,11 +13,11 @@ module.exports = defineConfig({
   pages: {
     index: {
       entry: "src/main.ts", // entry for the page
-      title: "Burger Adventskalender 2022",
+      title,
     },
   },
   pwa: {
-    name: "Burger Adventskalender 2022",
+    name: title,
     themeColor: "#000000",
     workboxOptions: {
       skipWaiting: true,
